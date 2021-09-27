@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0924실습</title>
+</head>
+<body>
+
+    <fieldset>
+        <legend>납품자 정보</legend>
+        <ol>
+            <li>
+                <label for="name">납품자명(필수) : </label>
+                <input type="text" name = "name" id = "name">
+            </li>
+            <br>
+            <li>
+                <label for="email">email(필수) : </label>
+                <input type="text" name = "email" id = "email" placeholder="emial@naver.com">
+            </li>
+            <br>
+            <li>
+                <label for="url">홈페이지 : </label>
+                <input type="text" name = "url" id = "url" value = "http://">
+            </li>
+            <br>
+            <li>
+                <label for="palce">지역 : </label>
+                
+                <select name="place" id="place">
+                    <option value="부산" selected="selected"> 부산 </option>
+                    <option value="서울">서울</option>
+
+                </select>
+            </li>
+           <br>
+           
+        </ol>
+
+
+    </fieldset>
+    
+
+    <fieldset>
+        <legend>납품자 정보</legend>
+        <ol style="list-style-type: disc;">
+          
+            <li>
+                <label for="name">납품자명(필수) : </label>
+                <input type="text" name = "name" id = "name">
+            </li>
+            <br>
+            <li>
+                <label for="in">납품수량(필수) : </label>
+                <input type="text" name = "in" id = "in" placeholder="최소 100" min="100">
+            </li>
+            <br>
+            <li>
+                <label for="level">납품등급(필수) : </label>
+                <input type="range" name = "level" id = "level">
+            </li>
+            <br>
+            <li>
+                <label for="etc">기타사항 : </label>
+            
+              <textarea name="memo" id="memo" cols="30" rows="3">
+              </textarea>
+
+
+            </li>
+           <br>
+           
+        </ol>
+
+
+    </fieldset>
+    <br>
+    <input type="submit" value="send message">
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>실습문제2</h1>
+    <form action="get" action="">
+        <fieldset>
+            <legend>납품정보</legend>
+
+            <ol>
+                <li><label for="name">상품명 : </label><input list="name" id="namelist"/>
+                    <datalist id="name">
+                    <option value="황금 똥 사료">
+                    </datalist></li>
+                <li><label for="number">납품수량 : </label><input type="number" id="number" min="10" max="100" step="10" placeholder="최소10이상"></li>
+                <li><label for="range">납품등급 : </label><input type="range" id="range" onchange="showVal();"><span id="pVal"></span></li>
+                <li><label for="etc">기타사항 : </label><textarea name="etc" id="etc" cols="30" rows="5">엄마 황금똥사료 사와~</textarea></li>
+            </ol>
+        </fieldset>
+
+        <input type="button" value="send message" onclick="confirm();">
+        <br>
+    </form>
+    <br>
+    <div id="result"></div>
+    
+
+    <script>
+        function showVal(){
+            const val = document.getElementById("range").value;
+            pVal.innerHTML = val;
+
+        }
+        function confirm(){
+           result.innerText = "상품명 : " + namelist.value + "\n 납품수량 : " + number.value + "\n 납품등급 : " + range.value + "\n 기타사항 : " + etc.value;
+           result.style.backgroundColor="lightgreen";
+        }
+    </script>
+</body>
+</html>

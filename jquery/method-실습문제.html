@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.6.0.js"></script>
+
+</head>
+<body>
+    <h2>Method1</h2>
+    <script>
+        function add(){
+            const title = $("[name=title]").val();
+            const content = $("[name=content]").val();
+            const owner = $("[name=owner]").val();
+            
+            console.log(title);
+            $("#test").append($(`<tr><td>${title}</td><td>${content}</td><td>${owner}</td></tr>`));
+
+            
+
+        };
+      
+        </script>
+    
+    제목 : <input type="text" name="title" /> <br />
+    내용 : <input type="text" name="content" /><br />
+    작성자 : <input type="text" name="owner" /><br /> <br>
+    <input type="button" value="테이블에 추가" onclick="add()" /> <br><br>
+    <table border="1" id = "test">
+        <tr>
+            <td> 제목 </td>
+            <td> 내용 </td>
+            <td> 작성자 </td>
+        </tr>
+
+      
+    </table>
+​
+    <h2>Method2</h2>
+    <script>
+         let count = 1;
+        function addFile(){
+        
+
+            $("#wrap").append($(`<input type="file" id= `+`f${count}`+`><br>`));
+            count++;
+
+        };
+        function delFile(){
+            console.log(`#f${count-1}`);
+            $("input").remove(`#f${count-1}`);
+
+            count--;
+
+
+        };
+        </script>
+    
+    <div id = "wrap">
+        <input type="file" name="f0" id = "f0"/>  &nbsp;&nbsp;
+        <input type="button" value="추가" onclick="addFile()" />&nbsp;
+        <input type="button" value="삭제" onclick="delFile()" /><br>
+    </div>
+
+
+    
+</body>
+</html>
